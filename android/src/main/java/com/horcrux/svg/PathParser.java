@@ -474,9 +474,9 @@ class PathParser {
     // Bezier Curve Approximation
     float arc = ea - sa;
     if (arc < 0 && clockwise) {
-      arc += Math.PI * 2;
+      arc += (float)(Math.PI * 2);
     } else if (arc > 0 && !clockwise) {
-      arc -= Math.PI * 2;
+      arc -= (float)(Math.PI * 2);
     }
 
     int n = (int) Math.ceil(Math.abs(round(arc / (Math.PI / 2))));
